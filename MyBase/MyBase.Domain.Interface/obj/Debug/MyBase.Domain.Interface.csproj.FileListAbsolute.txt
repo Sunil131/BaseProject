@@ -1,0 +1,8 @@
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\bin\Debug\MyBase.Domain.Interface.dll.config
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\bin\Debug\MyBase.Domain.Interface.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\bin\Debug\MyBase.Domain.Interface.pdb
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\bin\Debug\MyBase.Domain.Core.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\bin\Debug\MyBase.Domain.Core.pdb
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\obj\Debug\MyBase.Domain.Interface.csprojResolveAssemblyReference.cache
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\obj\Debug\MyBase.Domain.Interface.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Domain.Interface\obj\Debug\MyBase.Domain.Interface.pdb

@@ -1,0 +1,14 @@
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Infrastructure.Data.dll.config
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Infrastructure.Data.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Infrastructure.Data.pdb
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\EntityFramework.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Domain.Core.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Domain.Interface.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Domain.Core.pdb
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\MyBase.Domain.Interface.pdb
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\EntityFramework.xml
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\bin\Debug\EntityFramework.SqlServer.xml
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\obj\Debug\MyBase.Infrastructure.Data.csprojResolveAssemblyReference.cache
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\obj\Debug\MyBase.Infrastructure.Data.dll
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\obj\Debug\MyBase.Infrastructure.Data.pdb
