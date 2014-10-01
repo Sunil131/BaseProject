@@ -6,6 +6,7 @@ using System.Web.Mvc;
 using MyBase.Infrastructure.Service;
 using MyBase.Infrastructure.Data.Model;
 using MyBase.Infrastructure.Core.ServiceInterface;
+using MyBase.Infrastructure.Core.PresentationModel;
 using MyBase.Infrastructure.DependencyResolution;
 using MyBase.Domain.Core.Entities;
 using MyBase.Domain.Core;
@@ -29,10 +30,11 @@ namespace MyBase.Controllers
         public ActionResult Index()
         {
 
-            List<UserProfile> up =  _UserMetaService.GetAllUsers();
+            var UserModel = _UserMetaService.GetAllUsers();
+
             ViewBag.Message = "Modify this template to jump-start your ASP.NET MVC application.";
 
-            return View();
+            return View(UserModel);
         }
 
         public ActionResult About()

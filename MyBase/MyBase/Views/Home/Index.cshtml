@@ -1,6 +1,9 @@
-﻿@{
+﻿@model MyBase.Infrastructure.Core.PresentationModel.UserModel
+@{
     ViewBag.Title = "Home Page";
 }
+
+
 @section featured {
     <section class="featured">
         <div class="content-wrapper">
@@ -43,3 +46,12 @@
         <a href="http://go.microsoft.com/fwlink/?LinkId=245157">Learn more…</a>
     </li>
 </ol>
+<h4>Below are the list of Users We have in our site</h4>
+<Ul>
+@foreach (var item in @Model.UserNames)
+{
+    <li>
+        @item.UserName.ToString();
+    </li>
+}
+</Ul>

@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 using MyBase.Infrastructure.Core.ServiceInterface;
 using MyBase.Domain.Interface;
 using MyBase.Domain.Core.Entities;
+using MyBase.Infrastructure.Core.PresentationModel;
 
 namespace MyBase.Infrastructure.Service
 {
@@ -17,9 +18,16 @@ namespace MyBase.Infrastructure.Service
         {
             _userRepo = userRepo;
         }
-        public List<UserProfile> GetAllUsers()
+   
+       public UserModel GetAllUsers()
         {
-            return _userRepo.GetAllUserName();
+
+             UserModel userModel = new UserModel
+             {
+                 UserNames = _userRepo.GetAllUserName()
+             };
+
+             return userModel;
         }
     }
 }

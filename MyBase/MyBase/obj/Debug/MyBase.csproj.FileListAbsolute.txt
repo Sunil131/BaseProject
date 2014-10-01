@@ -105,3 +105,4 @@ D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase\obj\Debug\MyBase.dll
 D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase\obj\Debug\MyBase.pdb
 D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase\bin\EntityFramework.SqlServer.dll
 D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase\bin\EntityFramework.SqlServer.xml
+D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase\bin\AutoMapper.Net4.dll
