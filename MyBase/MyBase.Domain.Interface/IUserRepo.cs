@@ -11,5 +11,11 @@ namespace MyBase.Domain.Interface
     public interface IUserRepo
     {
         List<UserProfile> GetAllUserName();
+
+        UserProfile GetUserByUserId(Func<UserProfile, bool> predicate);
+
+        int CreateUserDetails(User user);
+        
+
     }
 }

@@ -3,7 +3,7 @@
   <Version>10</Version>
   <SourceModelProvider>
     <ConnectionBasedModelProvider>
-      <ConnectionString>Data Source=TRANTOR70\SQLEXPRESSR2;Initial Catalog=MyBaseProj;User ID=sa;Pooling=False</ConnectionString>
+      <ConnectionString>Data Source=SUNILVAIO-PC\SQLEXPRESS;Initial Catalog=MyBaseProj;User ID=sa;Pooling=False;MultipleActiveResultSets=False;Application Name="Microsoft SQL Server Data Tools, Schema Compare"</ConnectionString>
     </ConnectionBasedModelProvider>
   </SourceModelProvider>
   <TargetModelProvider>

@@ -11,5 +11,8 @@ namespace MyBase.Infrastructure.Core.ServiceInterface
     public interface IUserMetaService
     {
         UserModel GetAllUsers();
+        UserDetailsModel FindUserProfileByUserId(string UserName);
+        UserProfile FindUserDetailsByUserId(string UserName);               
+        int CreateUserData(UserDetailsModel userDetailsModel);
     }
 }

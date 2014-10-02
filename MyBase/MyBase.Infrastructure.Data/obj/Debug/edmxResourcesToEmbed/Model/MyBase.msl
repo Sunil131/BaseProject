@@ -422,5 +422,20 @@
       </ResultMapping>
     </FunctionImportMapping>
     <FunctionImportMapping FunctionImportName="aspnet_WebEvent_LogEvent" FunctionName="MyBaseProjModel.Store.aspnet_WebEvent_LogEvent" />
+    <EntitySetMapping Name="Users">
+      <EntityTypeMapping TypeName="MyBaseProjModel.User">
+        <MappingFragment StoreEntitySet="Users">
+          <ScalarProperty Name="CreatedOn" ColumnName="CreatedOn" />
+          <ScalarProperty Name="CreatedBy" ColumnName="CreatedBy" />
+          <ScalarProperty Name="Mobile" ColumnName="Mobile" />
+          <ScalarProperty Name="Phone" ColumnName="Phone" />
+          <ScalarProperty Name="DateofBirth" ColumnName="DateofBirth" />
+          <ScalarProperty Name="Last" ColumnName="Last" />
+          <ScalarProperty Name="Middle" ColumnName="Middle" />
+          <ScalarProperty Name="First" ColumnName="First" />
+          <ScalarProperty Name="ID" ColumnName="ID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

@@ -2,7 +2,7 @@
 <#@ include file="EF6.Utility.CS.ttinclude"#><#@ 
  output extension=".cs"#><#
 
-const string inputFile = @"D:\MyResearchs\GitSource\BaseProj\MyBase\MyBase.Infrastructure.Data\Model\MyBase.edmx";
+const string inputFile = @"../../MyBase.Infrastructure.Data/Model/MyBase.edmx";
 var textTransform = DynamicTextTransformation.Create(this);
 var code = new CodeGenerationTools(this);
 var ef = new MetadataTools(this);

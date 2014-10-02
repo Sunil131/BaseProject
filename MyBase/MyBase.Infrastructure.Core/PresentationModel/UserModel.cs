@@ -10,5 +10,7 @@ namespace MyBase.Infrastructure.Core.PresentationModel
     public class UserModel
     {
         public List<UserProfile> UserNames { get; set; }
+
+
     }
 }

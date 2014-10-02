@@ -20,5 +20,24 @@ namespace MyBase.Infrastructure.Data.Repositories
                 return entities.UserProfiles.ToList();
             }
         }
+
+
+        public UserProfile GetUserByUserId(Func<UserProfile, bool> predicate)
+        {
+            using (var entities = new MyBase.Infrastructure.Data.Model.MyBaseProjEntities())
+            {
+                return  entities.UserProfiles.Include("User").Where(predicate).SingleOrDefault();
+            }
+        }
+
+
+        public int CreateUserDetails(User user)
+        {
+            using (var entities = new MyBase.Infrastructure.Data.Model.MyBaseProjEntities())
+            {
+                entities.Users.Add(user);
+                return entities.SaveChanges();
+            }
+        }
     }
 }

@@ -10,6 +10,13 @@ using Microsoft.Web.WebPages.OAuth;
 using WebMatrix.WebData;
 using MyBase.Filters;
 using MyBase.Models;
+//using MyBase.Infrastructure.Service;
+//using MyBase.Infrastructure.Data.Model;
+using MyBase.Infrastructure.Core.ServiceInterface;
+//using MyBase.Infrastructure.Core.PresentationModel;
+//using MyBase.Infrastructure.DependencyResolution;
+//using MyBase.Domain.Core.Entities;
+//using MyBase.Domain.Core;
 
 namespace MyBase.Controllers
 {
@@ -17,6 +24,14 @@ namespace MyBase.Controllers
     [InitializeSimpleMembership]
     public class AccountController : Controller
     {
+         private readonly IUserMetaService _UserMetaService;
+         private string UserName;
+
+         public AccountController(IUserMetaService _userMetaService)
+        {
+            _UserMetaService = _userMetaService;
+        }
+
         //
         // GET: /Account/Login
 
@@ -37,6 +52,7 @@ namespace MyBase.Controllers
         {
             if (ModelState.IsValid && WebSecurity.Login(model.UserName, model.Password, persistCookie: model.RememberMe))
             {
+                UserName = model.UserName;
                 return RedirectToLocal(returnUrl);
             }
 
@@ -337,7 +353,17 @@ namespace MyBase.Controllers
             }
             else
             {
-                return RedirectToAction("Index", "Home");
+                var userDetails = _UserMetaService.FindUserDetailsByUserId(UserName);
+                var userProfile = _UserMetaService.FindUserProfileByUserId(UserName);
+                if (userDetails.User.First == string.Empty)
+                {
+                    return RedirectToAction("UserDetails", "Private", new {UserName=UserName,UserID=userDetails.UserId });
+                }
+                else
+                {
+                    return RedirectToAction("ShowUserDetails", "Private", new { UserName = UserName, UserID = userDetails.UserId });
+                }
+                
             }
         }
 

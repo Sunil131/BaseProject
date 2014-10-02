@@ -39,6 +39,8 @@
         <AssociationConnector Association="MyBaseProjModel.FK__aspnet_Pr__UserI__38996AB5" ManuallyRouted="false" />
         <AssociationConnector Association="MyBaseProjModel.aspnet_UsersInRoles" ManuallyRouted="false" />
         <AssociationConnector Association="MyBaseProjModel.webpages_UsersInRoles" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="MyBaseProjModel.User" Width="1.5" PointX="5.25" PointY="0.75" />
+        <AssociationConnector Association="MyBaseProjModel.FK_Users_UserProfile1" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

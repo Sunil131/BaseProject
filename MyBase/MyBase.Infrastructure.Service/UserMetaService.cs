@@ -1,4 +1,5 @@
 ﻿using System;
+using AutoMapper;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -29,5 +30,31 @@ namespace MyBase.Infrastructure.Service
 
              return userModel;
         }
+
+
+
+
+       public UserDetailsModel FindUserProfileByUserId(string UserName)
+       {
+           var userDetailModel = Mapper.Map<UserProfile, UserDetailsModel>(_userRepo.GetUserByUserId(cond => cond.UserName.Equals(UserName)));
+           return userDetailModel;
+
+       }
+
+       public UserProfile FindUserDetailsByUserId(string UserName)
+       {
+           return _userRepo.GetUserByUserId(cond => cond.UserName.Equals(UserName));
+
+       }
+
+       public int CreateUserData(UserDetailsModel userDetailsModel)
+       {
+           
+           var user = Mapper.Map<UserDetailsModel, User>(userDetailsModel);
+           //user.ID = user.UserProfile.UserId;
+           user.CreatedBy = 0;
+           user.CreatedOn = DateTime.Now;
+           return _userRepo.CreateUserDetails(user);
+       }
     }
 }

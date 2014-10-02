@@ -150,6 +150,7 @@
     <Property Name="UserId" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="UserName" Type="String" MaxLength="56" FixedLength="false" Unicode="true" Nullable="false" />
     <NavigationProperty Name="webpages_Roles" Relationship="Self.webpages_UsersInRoles" FromRole="UserProfile" ToRole="webpages_Roles" />
+    <NavigationProperty Name="User" Relationship="MyBaseProjModel.FK_Users_UserProfile1" FromRole="UserProfile" ToRole="User" />
   </EntityType>
   <EntityType Name="webpages_Membership">
     <Key>
@@ -830,6 +831,11 @@
       <Parameter Name="ExceptionType" Mode="In" Type="String" />
       <Parameter Name="Details" Mode="In" Type="String" />
     </FunctionImport>
+    <EntitySet Name="Users" EntityType="MyBaseProjModel.User" />
+    <AssociationSet Name="FK_Users_UserProfile1" Association="MyBaseProjModel.FK_Users_UserProfile1">
+      <End Role="UserProfile" EntitySet="UserProfiles" />
+      <End Role="User" EntitySet="Users" />
+    </AssociationSet>
   </EntityContainer>
   <ComplexType Name="aspnet_Membership_GetPassword_Result">
     <Property Type="String" Name="Column1" Nullable="true" MaxLength="128" />
@@ -880,4 +886,31 @@
     <Property Type="String" Name="Column1" Nullable="false" MaxLength="1" />
     <Property Type="String" Name="Name" Nullable="false" MaxLength="256" />
   </ComplexType>
+  <EntityType Name="User">
+    <Key>
+      <PropertyRef Name="ID" />
+    </Key>
+    <Property Name="ID" Type="Int32" Nullable="false" />
+    <Property Name="First" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Middle" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="Last" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="DateofBirth" Type="DateTime" Nullable="false" Precision="0" />
+    <Property Name="Phone" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="Mobile" Type="String" MaxLength="15" FixedLength="false" Unicode="true" />
+    <Property Name="CreatedBy" Type="Int32" />
+    <Property Name="CreatedOn" Type="DateTime" Precision="3" />
+    <NavigationProperty Name="UserProfile" Relationship="MyBaseProjModel.FK_Users_UserProfile1" FromRole="User" ToRole="UserProfile" />
+  </EntityType>
+  <Association Name="FK_Users_UserProfile1">
+    <End Type="MyBaseProjModel.UserProfile" Role="UserProfile" Multiplicity="1" />
+    <End Type="MyBaseProjModel.User" Role="User" Multiplicity="0..1" />
+    <ReferentialConstraint>
+      <Principal Role="UserProfile">
+        <PropertyRef Name="UserId" />
+      </Principal>
+      <Dependent Role="User">
+        <PropertyRef Name="ID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

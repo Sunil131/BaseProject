@@ -29,7 +29,7 @@ namespace MyBase
             BundleConfig.RegisterBundles(BundleTable.Bundles);
             AuthConfig.RegisterAuth();
             MyBase.Infrastructure.DependencyResolution.Bootstrapper.Initialise();
-
+            MyBase.Infrastructure.DependencyResolution.ObjectMapping.CreateMap();
             
             
 
